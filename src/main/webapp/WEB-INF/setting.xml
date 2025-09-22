@@ -23,6 +23,7 @@
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="hikariDataSource"/>
+        <property name="mapperLocations" value="classpath*:**/ChartMapper.xml, classpath*:**/PayMapper.xml"/>
         <property name="typeAliasesPackage" value="admin, bag, join, login, main, pay, view, chart"/>
     </bean>
 
